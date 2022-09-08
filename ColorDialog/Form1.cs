@@ -20,8 +20,8 @@ namespace ColorDialog
         private void button1_Click(object sender, EventArgs e)
         {
             var dlg = new System.Windows.Forms.ColorDialog();
-            dlg.ShowDialog();
-            this.BackColor = dlg.Color;
+            if (dlg.ShowDialog() == DialogResult.OK)
+                this.BackColor = dlg.Color;
         }
     }
 }
